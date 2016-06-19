@@ -69,17 +69,70 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:id="@+id/share_group_publish"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center">
+                        <!--发布朋友圈图片-->
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/share_group_camera" />
+                    </LinearLayout>
 
                 </RelativeLayout>
 
-
-                <TextView
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="#ddd"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="10dp"
-                    android:text="分享记录生活的点点滴滴~" />
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/share_user_top_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/share_user_top_image" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/share_user_top_image" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/share_user_top_image" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/share_user_top_image" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/share_user_top_image" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/share_user_top_image" />
+
+                    </LinearLayout>
+
+                </ScrollView>
+
                 <!--下方的线-->
                 <View
                     android:layout_width="match_parent"
