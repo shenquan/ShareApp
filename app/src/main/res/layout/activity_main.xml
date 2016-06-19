@@ -1,16 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#fff"
+    android:orientation="vertical"
     tools:context="com.shugeek.shareapp.MainActivity">
+    <!--头部-->
+    <LinearLayout
+        android:id="@+id/share_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#3f51b5"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="爱 分 享"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+    </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#ddd"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="分享记录生活的点点滴滴~" />
+    <!--下方的线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#666" />
+
+    <!--好友列表-->
+    <ListView
+        android:id="@+id/share_contact_list"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="分享生活的点点滴滴" />
-</RelativeLayout>
+        android:divider="#666"
+        android:dividerHeight="1px" />
+
+</LinearLayout>

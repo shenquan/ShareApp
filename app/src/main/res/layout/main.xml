@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <!--头部-->
+            <LinearLayout
+                android:id="@+id/share_tab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#3f51b5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/share_group_arrow_left"
+                            android:layout_width="40dp"
+                            android:layout_height="30dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="14dp">
+
+                            <ImageView
+                                android:layout_width="8dp"
+                                android:layout_height="18dp"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/share_group_arrow_left" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/share_group_line"
+                            android:layout_width="1px"
+                            android:layout_height="18dp"
+                            android:layout_toRightOf="@+id/share_group_arrow_left"
+                            android:background="#222" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/share_group_line"
+                            android:gravity="center_vertical"
+                            android:text="分 享 圈"
+                            android:textColor="#fff"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#ddd"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="分享记录生活的点点滴滴~" />
+                <!--下方的线-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#666" />
+
+            </LinearLayout>
+
+            <!--头部-->
+            <LinearLayout
+                android:id="@+id/share_tab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#3f51b5"
+                    android:gravity="center"
+                    android:text="爱 分 享"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+                <!--下方的线-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#666" />
+
+                <!--好友列表-->
+                <ListView
+                    android:id="@+id/share_contact_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#666"
+                    android:dividerHeight="1px" />
+            </LinearLayout>
+
+        </FrameLayout>
+        <!--上方的线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#777" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff" />
+
+    </LinearLayout>
+
+</TabHost>

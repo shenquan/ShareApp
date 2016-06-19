@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#fff">
+        <!--用户头像-->
+        <ImageView
+            android:id="@+id/list_item_head_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/share_user_image" />
+        <!--用户昵称-->
+        <TextView
+            android:id="@+id/list_item_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/list_item_head_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="晴天不下雨"
+            android:textColor="#222"
+            android:textSize="16sp" />
+        <!--用户个性签名-->
+        <TextView
+            android:id="@+id/list_item_user_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_item_nick_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/list_item_head_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="无论晴天还是下雨，心情依旧美好~"
+            android:textColor="#666" />
+
+    </RelativeLayout>
+
+</FrameLayout>
+
