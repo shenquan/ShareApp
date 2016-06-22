@@ -17,8 +17,8 @@ public class StartActivity extends Activity {
         // 隐藏标题栏
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         // 隐藏状态栏
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        /*getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);*/
         setContentView(R.layout.start_activity);
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -27,7 +27,7 @@ public class StartActivity extends Activity {
                 startActivity(intent);
                 StartActivity.this.finish();
             }
-        }, 1000);
+        }, 1500);
 
     }
 }
