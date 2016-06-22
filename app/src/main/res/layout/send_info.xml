@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddd"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#333"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/send_info_arrow_left"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp">
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="18dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/share_group_arrow_left" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/share_group_line"
+                android:layout_width="1px"
+                android:layout_height="18dp"
+                android:layout_toRightOf="@+id/share_group_arrow_left"
+                android:background="#111" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="14dp">
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="18dp"
+                android:layout_marginRight="10dp"
+                android:background="#111" />
+
+            <Button
+                android:id="@+id/send_info_button"
+                android:layout_width="56dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/send_button"
+                android:text="发送"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:hint="此刻你想说点什么"
+            android:maxLength="500"
+            android:gravity="start"
+            android:background="#ddd"
+            android:textSize="16sp"
+            android:textColor="#111"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:background="#ccc">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/send_select_image_button"
+                android:scaleType="fitXY"
+                android:alpha="0.7"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

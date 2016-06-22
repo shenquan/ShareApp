@@ -1,7 +1,8 @@
-package com.shugeek.shareapp;
+package com.shugeek.shareapp.activity;
 
 import android.app.TabActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -10,15 +11,20 @@ import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.Toast;
 
+import com.shugeek.shareapp.R;
+import com.shugeek.shareapp.adapter.ContactAdapter;
+import com.shugeek.shareapp.database.MyDatabaseHelper;
+
 public class MainActivity extends TabActivity {
     private Context mContext;
     private static long EXIT_TIME = 0;
     private TabHost mTabHost;
+    private MyDatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.share_main);
         mContext = getApplicationContext();
         mTabHost = getTabHost();
         if (mTabHost != null) {
@@ -46,6 +52,10 @@ public class MainActivity extends TabActivity {
         ListView contactListView = (ListView) findViewById(R.id.share_contact_list);
         ContactAdapter contactAdapter = new ContactAdapter(mContext);
         contactListView.setAdapter(contactAdapter);
+        //创建数据库
+        databaseHelper = new MyDatabaseHelper(this, "Share.db", null, 3, mContext);
+        databaseHelper.getWritableDatabase();
+
     }
 
     /**
@@ -69,7 +79,9 @@ public class MainActivity extends TabActivity {
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "韩申权点击发布程序按钮", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "韩申权点击发布程序按钮", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext, SendInfo.class);
+                startActivity(intent);
             }
         });
     }
