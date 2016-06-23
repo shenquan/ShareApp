@@ -63,7 +63,7 @@ public class ContactAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return i;
     }
 
     @Override
@@ -88,9 +88,12 @@ public class ContactAdapter extends BaseAdapter {
         holder.imageView.setImageResource(headImage[i]);
         holder.nickNameTextView.setText(nickName[i]);
         holder.signTextView.setText(signature[i]);
-        if (i == 1 || i == 3) {
+        if (i == 1 || i == 3 || i == 8) {
             holder.nickNameTextView.setTextColor(0xffdd0000);
             holder.signTextView.setTextColor(0xffdd0000);
+        } else {//此处必须加else，因为会重用
+            holder.nickNameTextView.setTextColor(0xff222222);
+            holder.signTextView.setTextColor(0xff666666);
         }
 
         return convertView;

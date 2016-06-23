@@ -3,6 +3,7 @@ package com.shugeek.shareapp.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.shugeek.shareapp.R;
@@ -10,7 +11,7 @@ import com.shugeek.shareapp.R;
 /**
  * Created by Administrator on 2016/6/22.
  */
-public class SendInfo extends Activity {
+public class SendInfoActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,18 @@ public class SendInfo extends Activity {
                 finish();
             }
         });
+
+        Button send_info_button = (Button)findViewById(R.id.send_info_button);
+        send_info_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+
+                //结束当前的界面
+                finish();
+            }
+        });
+
     }
 
 

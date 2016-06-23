@@ -80,7 +80,7 @@ public class MainActivity extends TabActivity {
             @Override
             public void onClick(View view) {
 //                Toast.makeText(getApplicationContext(), "韩申权点击发布程序按钮", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(mContext, SendInfo.class);
+                Intent intent = new Intent(mContext, SendInfoActivity.class);
                 startActivity(intent);
             }
         });
