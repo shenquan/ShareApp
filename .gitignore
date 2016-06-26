@@ -35,3 +35,4 @@ out/
 *.[ao]
 *.log
 .vscode/
+local.properties
