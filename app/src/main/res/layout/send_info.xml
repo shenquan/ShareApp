@@ -94,7 +94,8 @@
                 android:layout_marginLeft="15dp"
                 android:src="@mipmap/send_select_image_button"
                 android:scaleType="fitXY"
-                android:alpha="0.7"/>
+                android:alpha="0.7"
+                android:visibility="gone"/>
         </LinearLayout>
 
     </LinearLayout>
