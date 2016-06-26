@@ -29,7 +29,7 @@ public class StartActivity extends Activity {
                 startActivity(intent);
                 StartActivity.this.finish();
             }
-        }, 1500);
+        }, 200);
 
     }
 }
