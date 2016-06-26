@@ -17,6 +17,7 @@ import com.shugeek.shareapp.database.MyDatabaseHelper;
  */
 public class SendInfoActivity extends Activity {
     private MyDatabaseHelper databaseHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +39,11 @@ public class SendInfoActivity extends Activity {
             }
         });
 
-        Button send_info_button = (Button)findViewById(R.id.send_info_button);
+        Button send_info_button = (Button) findViewById(R.id.send_info_button);
         send_info_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                databaseHelper =  new MyDatabaseHelper(SendInfoActivity.this,"Share.db",null,1,SendInfoActivity.this);
+                databaseHelper = new MyDatabaseHelper(SendInfoActivity.this, "Share.db", null, 1, SendInfoActivity.this);
                 SQLiteDatabase addData = databaseHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
                 /*values.put("nickName","张三");
@@ -50,9 +51,9 @@ public class SendInfoActivity extends Activity {
                 addData.insert("User",null,values);*/
 
                 values.clear();
-                TextView text = (TextView)findViewById(R.id.send_info_text);
-                values.put("shareText",text.getText().toString());
-                addData.insert("Share",null,values);
+                TextView text = (TextView) findViewById(R.id.send_info_text);
+                values.put("shareText", text.getText().toString());
+                addData.insert("Share", null, values);
 
                 //结束当前的界面
                 finish();

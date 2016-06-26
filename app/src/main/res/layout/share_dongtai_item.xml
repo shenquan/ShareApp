@@ -6,8 +6,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="3dp"
-        >
+        android:layout_margin="3dp">
 
         <ImageView
             android:id="@+id/dongtai_item_image"
@@ -41,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="发表的动态"
-                android:textColor="#333"/>
+                android:textColor="#333" />
 
         </LinearLayout>
 

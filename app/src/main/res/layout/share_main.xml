@@ -125,10 +125,10 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="34dp"
+                                android:background="#fafafa"
                                 android:gravity="center_vertical"
                                 android:text="分享圈动态"
-                                android:textColor="#666"
-                                android:background="#fafafa"/>
+                                android:textColor="#666" />
 
                         </LinearLayout>
 
